@@ -14,13 +14,17 @@ int Map::returnDifficulty() { return difficulty; };
 
 int Map::returnProgress() { return progress; };
 
+
+
 void Map::showLocations() {
 	cout << "\nLocations list: ";
 	for (int i = 0; i < locations.size(); i++)
 	{
-		cout << i <<". Location: " << locations[i].returnName();
+		cout << i << ". Location: " << locations[i].returnName() << "Progress: " << locations[i].returnProgress();
 	}
 };
+
+
 
 void Map::removeLocation(const string& locToRemName) {
 	for (int i = 0; i < locations.size(); i++)
@@ -30,6 +34,7 @@ void Map::removeLocation(const string& locToRemName) {
 			vector<Location>::iterator it;
 			it = locations.begin() + i;
 			locations.erase(it);
+			progress -= 1;
 		}
 	}
 }

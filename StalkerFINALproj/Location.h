@@ -22,7 +22,9 @@ public:
 	
 	}
 	Location(const string& nam, int progr, vector<NPC> npcL, vector<Mutant> mutantL, vector<Quest> questL) :
-		name(nam), progress(progr), NPClist(npcL), MutantList(mutantL), QuestList(questL) {}
+		name(nam), progress(progr), NPClist(npcL), MutantList(mutantL), QuestList(questL) {
+		progress = QuestList.size();
+	}
 	const string returnName();
 	int returnProgress();
 
