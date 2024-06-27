@@ -13,19 +13,20 @@ class Character {
 	int armor;
 	int radiationlvl;
 	int maxWeight;
-	int BusyWeight; //if BusyWeight >= maxWeight : can't move(add logic)
+	int busyWeight; //if BusyWeight >= maxWeight : can't move(add logic)
 	bool canMove; //0 - can move, 1 - can't
 	vector<Item> inventory;
 public:
-	Character() : name("NULL"), health(0), armor(0), radiationlvl(1), maxWeight(50), BusyWeight(0), canMove(0), inventory() {}
+	Character() { name = "NULL", health = 0; armor = 0; radiationlvl = 0; maxWeight = 0; busyWeight = 0; canMove = 0; Item null; inventory = { null }; }
 
+	Character(const string& na, int he, int ar, int rad, int maxW, int busyW, bool canMo, vector<Item> invent) : name(na), health(he), armor(ar), radiationlvl(rad), maxWeight(maxW), busyWeight(busyW), canMove(canMo), inventory(invent) {}
 	const string returnName();
-	const int returnHealth();
-	const int returnArmor();
-	const int returnRadLvl();
-	const int returnMaxWeight();
-	const int returnBusyWeight();
-	const bool returnIfCanMove();
+	int returnHealth();
+	int returnArmor();
+	int returnRadLvl();
+	int returnMaxWeight();
+	int returnBusyWeight();
+	bool returnIfCanMove();
 
 	void changeHealth(int val, bool way); // 0 - "-", 1 - "+";
 	void changeArmor(int val, bool way);	// 0 - "-", 1 - "+";

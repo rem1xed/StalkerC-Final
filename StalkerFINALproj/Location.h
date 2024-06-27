@@ -14,7 +14,13 @@ class Location
 	vector<Mutant> MutantList;
 	vector<Quest> QuestList;
 public:
-	Location() : name("NULL"), progress(0), NPClist(0), MutantList(0), QuestList(0) {}
+	Location() { 
+		name = "NULL"; progress = 0; 
+		NPC nullNPC; NPClist = { nullNPC }; 
+		Mutant nullMut;  MutantList = { nullMut }; 
+		Quest nullQ; QuestList = { nullQ };
+	
+	}
 
 	string returnName();
 	int returnProgress();
