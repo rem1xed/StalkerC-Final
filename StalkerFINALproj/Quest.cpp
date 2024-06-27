@@ -13,7 +13,9 @@ using namespace std;
 
 const string Quest::returnName(){ return name;}
 
-int Quest::guesTsheWord()
+
+
+int Quest::guessTheWord()
 {
 
     srand(static_cast<unsigned int>(time(0)));
@@ -52,6 +54,8 @@ int Quest::guesTsheWord()
         }
     }
 
+
+
     return 0;
 }
 
@@ -71,9 +75,9 @@ void Quest::displayField(const vector<vector<char>>& field) {
 void Quest::artifactHunt(Character& player)
 {
     srand(time(0));
-    vector<vector<char>> field(4, vector<char>(4, '0'));
-    int artifactX = rand() % 4;
-    int artifactY = rand() % 4;
+    vector<vector<char>> field(3, vector<char>(3, '0'));
+    int artifactX = rand() % 3;
+    int artifactY = rand() % 3;
 
     int anomalies = 0;
     while (anomalies < 4) {
@@ -115,9 +119,9 @@ void Quest::artifactHunt(Character& player)
     }
 }
 
-void playStalkeroulette(int numberOfChambers = 6)
+void Quest::playStalkeroulette()
 {
-
+    int numberOfChambers = 6;
     srand(static_cast<unsigned int>(time(0)));
 
 
@@ -125,72 +129,97 @@ void playStalkeroulette(int numberOfChambers = 6)
 
 
     int playerChoice;
-    cout << "Єй фраєр! Стій! Давай одну гру пограєм'\n";
-    cout << "В барабані " << numberOfChambers << " камер.\n";
-    cout << "Вибирай від 1 до " << numberOfChambers;
+    cout << "Hey a fryer! Stop! Let's play a game'\n";
+    cout << "In the drum " << numberOfChambers << " bullet.\n";
+    cout << "Choose from 1 to " << numberOfChambers;
     cin >> playerChoice;
 
 
     if (playerChoice < 1 || playerChoice > numberOfChambers) {
-        cout << "Ну ти пацан. Сказали нормально, від одного до " << numberOfChambers << "." << endl;
+        cout << "You're a boy. They said it was okay, from one to " << numberOfChambers << "." << endl;
         return;
     }
 
-    cout << "*звук вистрілу*" << endl;;
+    cout << "*sound of a shot*" << endl;;
     Sleep(2000);
     if (playerChoice - 1 == bulletPosition) {
-        cout << "Був сталкер, нема сталкера" << endl;
+        cout << "There was a stalker, there is no stalker" << endl;
     }
     else {
 
-        cout << "Тиранули мене пацани,тиранули. Ви вижили." << endl;
+        cout << "The boys were bullying me, bullying me. You survived." << endl;
     }
 }
 
 
-void playRockPaperScissors() 
+void Quest::playRockPaperScissors()
 {
-    
-
     srand(static_cast<unsigned int>(time(0)));
 
-
     int playerChoice, computerChoice;
-    string choices[3] = { "Артефакт", "Ніж", "Карбованець" };
+    string choices[3] = { "Artifact", "Knife", "Coin" };
 
- 
-
-    cout << "Гра 'Артефакт, Ніж, Карбованець'\n";
-    cout << "Виберіть:\n";
-    cout << "0: Артефакт\n";
-    cout << "1: Ніж\n";
-    cout << "2: Карбованець\n";
-    cout << "Ваш вибір: ";
+    cout << "Game 'Artifact, Knife, Coin'\n";
+    cout << "Choose:\n";
+    cout << "0: Artifact\n";
+    cout << "1: Knife\n";
+    cout << "2: Coin\n";
+    cout << "Your choice: ";
     cin >> playerChoice;
 
-
     if (playerChoice < 0 || playerChoice > 2) {
-        cout << "Ну ти пацан. Сказали нормально, від одного до три загадати. Козел" << endl;
+        cout << "Hey, follow the instructions! Choose a number between 0 and 2." << endl;
         return;
     }
 
-
     computerChoice = rand() % 3;
 
-  
-    cout << "Ви обрали: " << choices[playerChoice] << endl;
-    cout << "Бандит вибрав: " << choices[computerChoice] << endl;
+    cout << "You chose: " << choices[playerChoice] << endl;
+    cout << "Bandit chose: " << choices[computerChoice] << endl;
 
     if (playerChoice == computerChoice) {
-        cout << "На цей раз нічия!" << endl;
+        cout << "It's a draw this time!" << endl;
     }
     else if ((playerChoice == 0 && computerChoice == 1) ||
         (playerChoice == 1 && computerChoice == 2) ||
         (playerChoice == 2 && computerChoice == 0)) {
-        cout << "Ну пацанчик, на цей раз виграв!" << endl;
+        cout << "You win this time!" << endl;
     }
     else {
-        cout << "Ну шо браток, програв?!" << endl;
+        cout << "You lost this time!" << endl;
     }
+}
 
+
+//0 - artifactHunt, 1 = playStalkerroulete, 2 - playRockPaperScissors 3 - guessTheWord
+
+void Quest::playQuest(int type, Character& player) {
+    switch (type)
+    {
+    case 0:
+    {
+        artifactHunt(player);
+        break;
+    }
+    case 1:
+    {
+        playStalkeroulette();
+        break;
+    }
+    case 2:
+    {
+        playRockPaperScissors();
+        break;
+    }
+    case 3:
+    {
+        guessTheWord();
+        break;
+    }
+    default:
+    {
+        cerr << "\nWrong value";
+        break;
+    }
+    }
 }

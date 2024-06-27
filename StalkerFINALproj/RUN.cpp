@@ -16,8 +16,11 @@
 
 using namespace std;
 
-Location locTest;
-Map currentMap(3, 1, {locTest});
+Location locTest, locTest2;
+
+Map currentMap(3, 1, {locTest, locTest});
+
+
 
 
 void main()
@@ -29,17 +32,23 @@ void main()
 
 	int SuccessInTheQuest=1;
 
+	cout << "Map Progress: " << currentMap.returnProgress();
+	currentMap.showLocations();
+
+
 	//SuccessInTheQuest = guesTsheWord();
 
 	//playRockPaperScissors();
 
 	//playStalkeroulette();
-	Item item("Bread", 2, 100, 5, 0);
-	vector<Item> inventory = { item };
-	Character player("NAME", 100, 0, 50, 0, 0, 0, inventory);
-	Quest quest;
-	
-	quest.artifactHunt(player);
+	// 
+	// 
+	//Item item("Bread", 2, 100, 5, 0);
+	//vector<Item> inventory = { item };
+	//Character player("NAME", 100, 0, 50, 0, 0, 0, inventory);
+	//Quest quest;
+	//
+	//quest.artifactHunt(player);
 
 
 	

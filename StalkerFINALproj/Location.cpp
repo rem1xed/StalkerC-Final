@@ -37,6 +37,7 @@ void Location::removeQuest(const string& QuestName) {
 			vector<Quest>::iterator it;
 			it = QuestList.begin() + i;
 			QuestList.erase(it);
+			progress -= 1;
 		}
 	}
 };
