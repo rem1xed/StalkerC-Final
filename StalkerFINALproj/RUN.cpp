@@ -1,9 +1,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
 #include <Windows.h>
+
 #include "games.h"
+#include "Anomaly.h"
 using namespace std;
 
 
@@ -22,8 +23,18 @@ void main()
 
 	//playRockPaperScissors();
 
-	playStalkeroulette();
+	//playStalkeroulette();
 
 
-	cout << "1";
+	artifactHunt(// ... );
+
+
+	
 }
+
+
+
+
+
+
+
