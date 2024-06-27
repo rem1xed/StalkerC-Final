@@ -20,19 +20,20 @@ class NPC {
 	bool friendStatus; // 0 - neutral, 1 - enemy;
 	vector<Item> inventory;
 public:
-	NPC() : name("NULL"), health(0), armor(0), isAlive(0), friendStatus(0), inventory(0) {}
+	NPC() { name = "NULL", health = 0, armor = 0, isAlive = 0, friendStatus = 0; Item nullIt; inventory = { nullIt }; }
+	NPC(const string& nam, int hlth, int arm, bool isAl) : name(nam), health(hlth), armor(arm), isAlive(isAl) {}
 
-	string returnName();
+	const string returnName();
 	int returnHealth();
 	int returnArmor();
 	bool returnAliveSt();
 	bool returnFriendStatus();
 
 
-	void changeHealth();
-	void changeArmor();
-	void changeAliveSt();
-	void changeFriendStatus();
+	void changeHealth(int val, bool way);
+	void changeArmor(int val, bool way);
+	void changeAliveSt(bool val);
+	void changeFriendStatus(int val, bool way);
 
 	~NPC();
 };

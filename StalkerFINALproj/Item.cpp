@@ -1,6 +1,10 @@
 #include <iostream>
+#include "Item.h"
 
 using namespace std;
 
-
-//Item(string n, int w, int p, int posP, int type) : name(n), weight(w), price(p), positivePoints(posP), typeOfItem(type) {}
+const string Item::returnName() { return name; };
+int Item::returnWeight() { return weight; };
+int Item::returnPrice() { return price; };
+int Item::returnPositivePoints() { return positivePoints; };
+int Item::returntypeOfItem() { return typeOfItem; };

@@ -3,15 +3,13 @@
 #include "Character.h"
 using namespace std;
 
-
-
 const string Character::returnName() { return name; };
-const int Character::returnHealth() { return health; };
-const int Character::returnArmor() { return armor; };
-const int Character::returnRadLvl() { return radiationlvl;};
-const int Character::returnMaxWeight() { return maxWeight; };
-const int Character::returnBusyWeight() { return BusyWeight; };
-const bool Character::returnIfCanMove() { return canMove; };
+int Character::returnHealth() { return health; };
+int Character::returnArmor() { return armor; };
+int Character::returnRadLvl() { return radiationlvl;};
+int Character::returnMaxWeight() { return maxWeight; };
+int Character::returnBusyWeight() { return busyWeight; };
+bool Character::returnIfCanMove() { return canMove; };
 
 void Character::changeHealth(int val, bool way) {
 	if (way) { health =- val; }
@@ -30,7 +28,7 @@ void Character::changeMaxWeight(int val, bool way) {
 	else {	maxWeight =+ val;}
 };
 void Character::changeBusyWeight(int val, bool way) {
-	if (way) { BusyWeight =- val; }
-	else { BusyWeight =+ val; }
+	if (way) { busyWeight =- val; }
+	else { busyWeight =+ val; }
 };
 void Character::changeIfCanMove(bool val) { canMove = val; };
