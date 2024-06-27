@@ -17,8 +17,11 @@ void NPC::changeHealth(int val, bool way) {
 };
 void NPC::changeArmor(int val, bool way) {
 	if (way) { armor -= val; }
-	else { armor -= +val; }
+	else { armor += val; }
 };
 void NPC::changeAliveSt(bool val) {
+	isAlive = val;
 };
-void NPC::changeFriendStatus(int val, bool way) {};
+void NPC::changeFriendStatus(bool val) {
+	friendStatus = val;
+};

@@ -12,23 +12,23 @@ int Character::returnBusyWeight() { return busyWeight; };
 bool Character::returnIfCanMove() { return canMove; };
 
 void Character::changeHealth(int val, bool way) {
-	if (way) { health =- val; }
-	else {	health =+ val;}
+	if (way) { health -= val; }
+	else {	health += val;}
 };
 void Character::changeArmor(int val, bool way) {
-	if (way) { armor =- val; }
-	else {	armor =+ val;}
+	if (way) { armor -= val; }
+	else {	armor += val;}
 };
 void Character::changeRadLvl(int val, bool way) {
-	if (way) { radiationlvl =- val; }
-	else {	radiationlvl =+ val;}
+	if (way) { radiationlvl -= val; }
+	else {	radiationlvl += val;}
 };
 void Character::changeMaxWeight(int val, bool way) {
-	if (way) { maxWeight =- val;}
-	else {	maxWeight =+ val;}
+	if (way) { maxWeight -= val;}
+	else {	maxWeight += val;}
 };
 void Character::changeBusyWeight(int val, bool way) {
-	if (way) { busyWeight =- val; }
-	else { busyWeight =+ val; }
+	if (way) { busyWeight -= val; }
+	else { busyWeight += val; }
 };
 void Character::changeIfCanMove(bool val) { canMove = val; };

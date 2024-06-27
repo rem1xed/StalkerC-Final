@@ -33,7 +33,7 @@ public:
 	void changeHealth(int val, bool way);
 	void changeArmor(int val, bool way);
 	void changeAliveSt(bool val);
-	void changeFriendStatus(int val, bool way);
+	void changeFriendStatus(bool val);
 
 	~NPC();
 };
