@@ -21,10 +21,12 @@ Location locTest, locTest2;
 Map currentMap(3, 1, {locTest, locTest});
 
 
-
+namespace Utilities1;
 
 void main()
 {
+	
+
 	SetConsoleCP(1251); // встановлення кодування Windows-1251 в  потік введення
 	SetConsoleOutputCP(1251); // встановлення кодування Windows-1251 в  потік виведення
 
@@ -36,6 +38,15 @@ void main()
 	currentMap.showLocations();
 
 
+	Item medkit("Medkit", 1, 50, 20, 0);
+	Item vodka("Vodka", 1, 10, 5, 1);
+	vector<Item> inventory = { medkit, vodka };
+
+	Character player("Stalker", 100, 50, 0, 100, 10, true, inventory);
+
+	Utilities1::displayCharacterInfo(player);
+
+	
 	//SuccessInTheQuest = guesTsheWord();
 
 	//playRockPaperScissors();
