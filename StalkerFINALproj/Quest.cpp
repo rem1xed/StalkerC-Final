@@ -15,7 +15,7 @@ const string Quest::returnName(){ return name;}
 
 
 
-int Quest::guessTheWord()
+bool Quest::guessTheWord()
 {
 
     srand(static_cast<unsigned int>(time(0)));
@@ -37,7 +37,8 @@ int Quest::guessTheWord()
         }
 
         if (playerGuess == secretNumber) {
-            cout << "Congratulations! You guessed the number!" << endl;
+            cout << "You guessed the number!" << endl;
+            return true;
             break;
         }
         else {
@@ -54,9 +55,6 @@ int Quest::guessTheWord()
         }
     }
 
-
-
-    return 0;
 }
 
 
@@ -72,7 +70,7 @@ void Quest::displayField(const vector<vector<char>>& field) {
     }
 }
 
-void Quest::artifactHunt(Character& player)
+bool Quest::artifactHunt(Character& player)
 {
     srand(time(0));
     vector<vector<char>> field(3, vector<char>(3, '0'));
@@ -101,6 +99,7 @@ void Quest::artifactHunt(Character& player)
             Item artifact("Artifact", 1, 100, 0, 2);
             player.addItem(artifact);
             foundArtifact = true;
+            return true;
         }
         else if (field[x][y] == '*') {
             cout << "You hit an anomaly! Health -10" << endl;
@@ -115,11 +114,13 @@ void Quest::artifactHunt(Character& player)
         if (player.returnHealth() <= 0) {
             cout << "You died!" << endl;
             break;
+            return false;
         }
     }
 }
 
-void Quest::playStalkeroulette()
+
+bool Quest::playStalkeroulette()
 {
     int numberOfChambers = 6;
     srand(static_cast<unsigned int>(time(0)));
@@ -137,23 +138,25 @@ void Quest::playStalkeroulette()
 
     if (playerChoice < 1 || playerChoice > numberOfChambers) {
         cout << "You're a boy. They said it was okay, from one to " << numberOfChambers << "." << endl;
-        return;
+        return false;
     }
 
     cout << "*sound of a shot*" << endl;;
     Sleep(2000);
     if (playerChoice - 1 == bulletPosition) {
         cout << "There was a stalker, there is no stalker" << endl;
+        return false;
     }
     else {
 
         cout << "The boys were bullying me, bullying me. You survived." << endl;
+        return true;
     }
+
 }
 
 
-void Quest::playRockPaperScissors()
-{
+bool Quest::playRockPaperScissors() {
     srand(static_cast<unsigned int>(time(0)));
 
     int playerChoice, computerChoice;
@@ -169,7 +172,7 @@ void Quest::playRockPaperScissors()
 
     if (playerChoice < 0 || playerChoice > 2) {
         cout << "Hey, follow the instructions! Choose a number between 0 and 2." << endl;
-        return;
+        return false; 
     }
 
     computerChoice = rand() % 3;
@@ -179,17 +182,19 @@ void Quest::playRockPaperScissors()
 
     if (playerChoice == computerChoice) {
         cout << "It's a draw this time!" << endl;
+        return false; 
     }
     else if ((playerChoice == 0 && computerChoice == 1) ||
         (playerChoice == 1 && computerChoice == 2) ||
         (playerChoice == 2 && computerChoice == 0)) {
         cout << "You win this time!" << endl;
+        return true;
     }
     else {
         cout << "You lost this time!" << endl;
+        return false;
     }
 }
-
 
 //0 - artifactHunt, 1 = playStalkerroulete, 2 - playRockPaperScissors 3 - guessTheWord
 
