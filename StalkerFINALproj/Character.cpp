@@ -1,6 +1,13 @@
 #include <iostream>
 #include <string>
 #include "Character.h"
+
+#include "Item.h"
+#include "Location.h"
+#include "MAP.h"
+#include "Mutant.h"
+#include "NPC.h"
+#include "Quest.h"
 using namespace std;
 
 const string Character::returnName() { return name; };
@@ -32,3 +39,5 @@ void Character::changeBusyWeight(int val, bool way) {
 	else { busyWeight += val; }
 };
 void Character::changeIfCanMove(bool val) { canMove = val; };
+
+void Character::addItem(const Item& item) { inventory.push_back(item); }

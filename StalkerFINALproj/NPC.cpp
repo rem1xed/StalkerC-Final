@@ -1,7 +1,13 @@
 #include <iostream>
 #include <string>
-#include "NPC.h"
+#include "Character.h"
 
+#include "Item.h"
+#include "Location.h"
+#include "MAP.h"
+#include "Mutant.h"
+#include "NPC.h"
+#include "Quest.h"
 using namespace std;
 
 const string NPC::returnName() { return name;  };

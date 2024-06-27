@@ -34,4 +34,8 @@ public:
 	void changeMaxWeight(int val, bool way);	// 0 - "-", 1 - "+";		
 	void changeBusyWeight(int val, bool way);	// 0 - "-", 1 - "+";
 	void changeIfCanMove(bool val);
+
+	void addItem(const Item& item);
+
+	~Character() {};
 };

@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
-    <ClCompile Include="games.cpp" />
+    <ClCompile Include="Quest.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="MAP.cpp" />
     <ClCompile Include="Mutant.cpp" />
@@ -148,9 +148,7 @@
     <ClCompile Include="RUN.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Anomaly.h" />
     <ClInclude Include="Character.h" />
-    <ClInclude Include="games.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="Quest.h" />
     <ClInclude Include="Item.h" />
