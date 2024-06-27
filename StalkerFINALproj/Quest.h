@@ -20,11 +20,11 @@ public:
 
 
 	void displayField(const vector<vector<char>>& field);
-	void artifactHunt(Character& player);
-	void playStalkeroulette();
-	void playRockPaperScissors();
+	bool artifactHunt(Character& player);
+	bool playStalkeroulette();
+	bool playRockPaperScissors();
 	void playQuest(int type, Character& player);
-	int guessTheWord();
+	bool guessTheWord();
 
 	const string returnName();
 };
