@@ -41,3 +41,30 @@ void Character::changeBusyWeight(int val, bool way) {
 void Character::changeIfCanMove(bool val) { canMove = val; };
 
 void Character::addItem(const Item& item) { inventory.push_back(item); }
+
+void Character::displayCharacterInfo()
+{
+
+    cout << "Character Information:" << endl;
+    cout << "----------------------" << endl;
+    cout << "Name: " << name << endl;
+    cout << "Health: " << health << endl;
+    cout << "Armor: " << armor << endl;
+    cout << "Radiation Level: " << radiationlvl << endl;
+    cout << "Max Weight: " << maxWeight << endl;
+    cout << "Busy Weight: " << busyWeight << endl;
+    cout << "Can Move: " << (canMove ? "Yes" : "No") << endl;
+    cout << endl;
+
+    cout << "Inventory:" << endl;
+    cout << "----------" << endl;
+
+    for (Item item : inventory) {
+        cout << "Item Name: " << item.returnName() << endl;
+        cout << "Weight: " << item.returnWeight() << endl;
+        cout << "Price: " << item.returnPrice() << endl;
+        cout << "Positive Points: " << item.returnPositivePoints() << endl;
+        cout << "Type of Item: " << item.returntypeOfItem() << endl;
+        cout << "---------------------" << endl;
+    }
+}

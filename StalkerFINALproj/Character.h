@@ -28,12 +28,16 @@ public:
 	int returnBusyWeight();
 	bool returnIfCanMove();
 
+	void displayCharacterInfo();
+
 	void changeHealth(int val, bool way); // 0 - "-", 1 - "+";
 	void changeArmor(int val, bool way);	// 0 - "-", 1 - "+";
 	void changeRadLvl(int val, bool way);	// 0 - "-", 1 - "+";
 	void changeMaxWeight(int val, bool way);	// 0 - "-", 1 - "+";		
 	void changeBusyWeight(int val, bool way);	// 0 - "-", 1 - "+";
 	void changeIfCanMove(bool val);
+
+
 
 	void addItem(const Item& item);
 
