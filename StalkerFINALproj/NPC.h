@@ -17,20 +17,22 @@ class NPC {
 
 	bool isAlive; // 0 alive, 1 - dead;
 
-	bool status; // 0 - neutral, 1 - enemy;
+	bool friendStatus; // 0 - neutral, 1 - enemy;
 	vector<Item> inventory;
 public:
-	NPC() : name("NULL"), health(0), armor(0), isAlive(0), inventory(0) {}
+	NPC() : name("NULL"), health(0), armor(0), isAlive(0), friendStatus(0), inventory(0) {}
 
 	string returnName();
 	int returnHealth();
 	int returnArmor();
 	bool returnAliveSt();
+	bool returnFriendStatus();
 
 
 	void changeHealth();
 	void changeArmor();
 	void changeAliveSt();
+	void changeFriendStatus();
 
 	~NPC();
 };

@@ -4,5 +4,6 @@
 
 using namespace std;
 
-class Quest;
+class Quest {
+};
 

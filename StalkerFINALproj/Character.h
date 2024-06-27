@@ -12,25 +12,25 @@ class Character {
 	int health;
 	int armor;
 	int radiationlvl;
-	int maxWeight; 
+	int maxWeight;
 	int BusyWeight; //if BusyWeight >= maxWeight : can't move(add logic)
 	bool canMove; //0 - can move, 1 - can't
 	vector<Item> inventory;
 public:
-	Character() : name("NULL"), health(0), armor(0), radiationlvl(1), maxWeight(50),BusyWeight(0), canMove(0), inventory() {}
+	Character() : name("NULL"), health(0), armor(0), radiationlvl(1), maxWeight(50), BusyWeight(0), canMove(0), inventory() {}
 
-	string returnName();
-	int returnHealth();
-	int returnArmor();
-	int returnRadLvl();
-	int returnMaxWeight();
-	int returnBusyWeight();
-	bool returnIfCanMove();
+	const string returnName();
+	const int returnHealth();
+	const int returnArmor();
+	const int returnRadLvl();
+	const int returnMaxWeight();
+	const int returnBusyWeight();
+	const bool returnIfCanMove();
 
-	void changeHealth();
-	void changeArmor();
-	void changeRadLvl();
-	void changeMaxWeight();
-	void changeBusyWeight();
-	void changeIfCanMove();
+	void changeHealth(int val, bool way); // 0 - "-", 1 - "+";
+	void changeArmor(int val, bool way);	// 0 - "-", 1 - "+";
+	void changeRadLvl(int val, bool way);	// 0 - "-", 1 - "+";
+	void changeMaxWeight(int val, bool way);	// 0 - "-", 1 - "+";		
+	void changeBusyWeight(int val, bool way);	// 0 - "-", 1 - "+";
+	void changeIfCanMove(bool val);
 };
