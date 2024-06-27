@@ -1,3 +1,6 @@
 ﻿  RUN.cpp
-C:\Users\м\source\repos\Stalker_repos\StalkerFINALproj\RUN.cpp(13,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\м\source\repos\Stalker_repos\StalkerFINALproj\Anomaly.h(23,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'RUN.cpp')
+  
+C:\Users\м\source\repos\Stalker_repos\StalkerFINALproj\RUN.cpp(14,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
   StalkerFINALproj.vcxproj -> C:\Users\м\source\repos\Stalker_repos\x64\Debug\StalkerFINALproj.exe

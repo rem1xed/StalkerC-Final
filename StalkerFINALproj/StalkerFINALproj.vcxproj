@@ -148,6 +148,7 @@
     <ClCompile Include="RUN.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Anomaly.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="games.h" />
     <ClInclude Include="Location.h" />
