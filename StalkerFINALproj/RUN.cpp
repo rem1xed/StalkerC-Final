@@ -13,7 +13,6 @@
 #include "NPC.h"
 #include "Quest.h"
 
-
 using namespace std;
 
 Location locTest, locTest2;
