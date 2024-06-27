@@ -6,5 +6,6 @@ C:\Users\м\source\repos\Stalker_repos\StalkerFINALproj\MAP.h(13,132): warning C
   (compiling source file 'RUN.cpp')
   
 C:\Users\м\source\repos\Stalker_repos\StalkerFINALproj\RUN.cpp(27,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-C:\Users\м\source\repos\Stalker_repos\StalkerFINALproj\RUN.cpp(47,2): error C2653: 'Utilities1': is not a class or namespace name
-C:\Users\м\source\repos\Stalker_repos\StalkerFINALproj\RUN.cpp(47,14): error C3861: 'displayCharacterInfo': identifier not found
+C:\Users\м\source\repos\Stalker_repos\StalkerFINALproj\RUN.cpp(47,2): error C3861: 'displayCharacterInfo': identifier not found
+  show.cpp
+  Generating Code...

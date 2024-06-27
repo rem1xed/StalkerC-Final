@@ -21,7 +21,7 @@ Location locTest, locTest2;
 Map currentMap(3, 1, {locTest, locTest});
 
 
-namespace Utilities1;
+
 
 void main()
 {
@@ -44,7 +44,7 @@ void main()
 
 	Character player("Stalker", 100, 50, 0, 100, 10, true, inventory);
 
-	Utilities1::displayCharacterInfo(player);
+	displayCharacterInfo(player);
 
 	
 	//SuccessInTheQuest = guesTsheWord();
