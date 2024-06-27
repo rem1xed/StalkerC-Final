@@ -1,16 +1,17 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "Character.h"
-
+#include <windows.h>
 #include "Item.h"
 #include "Location.h"
+#include "Character.h"
 #include "MAP.h"
 #include "Mutant.h"
 #include "NPC.h"
 #include "Quest.h"
 using namespace std;
 
+const string Quest::returnName(){ return name;}
 
 int Quest::guesTsheWord()
 {
@@ -114,82 +115,82 @@ void Quest::artifactHunt(Character& player)
     }
 }
 
-//void playStalkeroulette(int numberOfChambers = 6)
-//{
-//
-//    srand(static_cast<unsigned int>(time(0)));
-//
-//
-//    int bulletPosition = rand() % numberOfChambers;
-//
-//
-//    int playerChoice;
-//    cout << "Єй фраєр! Стій! Давай одну гру пограєм'\n";
-//    cout << "В барабані " << numberOfChambers << " камер.\n";
-//    cout << "Вибирай від 1 до " << numberOfChambers;
-//    cin >> playerChoice;
-//
-//
-//    if (playerChoice < 1 || playerChoice > numberOfChambers) {
-//        cout << "Ну ти пацан. Сказали нормально, від одного до " << numberOfChambers << "." << endl;
-//        return;
-//    }
-//
-//    cout << "*звук вистрілу*" << endl;;
-//    Sleep(2000);
-//    if (playerChoice - 1 == bulletPosition) {
-//        cout << "Був сталкер, нема сталкера" << endl;
-//    }
-//    else {
-//
-//        cout << "Тиранули мене пацани,тиранули. Ви вижили." << endl;
-//    }
-//}
+void playStalkeroulette(int numberOfChambers = 6)
+{
+
+    srand(static_cast<unsigned int>(time(0)));
 
 
-//void playRockPaperScissors() 
-//{
-//    
-//
-//    srand(static_cast<unsigned int>(time(0)));
-//
-//
-//    int playerChoice, computerChoice;
-//    string choices[3] = { "Артефакт", "Ніж", "Карбованець" };
-//
-// 
-//
-//    cout << "Гра 'Артефакт, Ніж, Карбованець'\n";
-//    cout << "Виберіть:\n";
-//    cout << "0: Артефакт\n";
-//    cout << "1: Ніж\n";
-//    cout << "2: Карбованець\n";
-//    cout << "Ваш вибір: ";
-//    cin >> playerChoice;
-//
-//
-//    if (playerChoice < 0 || playerChoice > 2) {
-//        cout << "Ну ти пацан. Сказали нормально, від одного до три загадати. Козел" << endl;
-//        return;
-//    }
-//
-//
-//    computerChoice = rand() % 3;
-//
-//  
-//    cout << "Ви обрали: " << choices[playerChoice] << endl;
-//    cout << "Бандит вибрав: " << choices[computerChoice] << endl;
-//
-//    if (playerChoice == computerChoice) {
-//        cout << "На цей раз нічия!" << endl;
-//    }
-//    else if ((playerChoice == 0 && computerChoice == 1) ||
-//        (playerChoice == 1 && computerChoice == 2) ||
-//        (playerChoice == 2 && computerChoice == 0)) {
-//        cout << "Ну пацанчик, на цей раз виграв!" << endl;
-//    }
-//    else {
-//        cout << "Ну шо браток, програв?!" << endl;
-//    }
-//
-//}
+    int bulletPosition = rand() % numberOfChambers;
+
+
+    int playerChoice;
+    cout << "Єй фраєр! Стій! Давай одну гру пограєм'\n";
+    cout << "В барабані " << numberOfChambers << " камер.\n";
+    cout << "Вибирай від 1 до " << numberOfChambers;
+    cin >> playerChoice;
+
+
+    if (playerChoice < 1 || playerChoice > numberOfChambers) {
+        cout << "Ну ти пацан. Сказали нормально, від одного до " << numberOfChambers << "." << endl;
+        return;
+    }
+
+    cout << "*звук вистрілу*" << endl;;
+    Sleep(2000);
+    if (playerChoice - 1 == bulletPosition) {
+        cout << "Був сталкер, нема сталкера" << endl;
+    }
+    else {
+
+        cout << "Тиранули мене пацани,тиранули. Ви вижили." << endl;
+    }
+}
+
+
+void playRockPaperScissors() 
+{
+    
+
+    srand(static_cast<unsigned int>(time(0)));
+
+
+    int playerChoice, computerChoice;
+    string choices[3] = { "Артефакт", "Ніж", "Карбованець" };
+
+ 
+
+    cout << "Гра 'Артефакт, Ніж, Карбованець'\n";
+    cout << "Виберіть:\n";
+    cout << "0: Артефакт\n";
+    cout << "1: Ніж\n";
+    cout << "2: Карбованець\n";
+    cout << "Ваш вибір: ";
+    cin >> playerChoice;
+
+
+    if (playerChoice < 0 || playerChoice > 2) {
+        cout << "Ну ти пацан. Сказали нормально, від одного до три загадати. Козел" << endl;
+        return;
+    }
+
+
+    computerChoice = rand() % 3;
+
+  
+    cout << "Ви обрали: " << choices[playerChoice] << endl;
+    cout << "Бандит вибрав: " << choices[computerChoice] << endl;
+
+    if (playerChoice == computerChoice) {
+        cout << "На цей раз нічия!" << endl;
+    }
+    else if ((playerChoice == 0 && computerChoice == 1) ||
+        (playerChoice == 1 && computerChoice == 2) ||
+        (playerChoice == 2 && computerChoice == 0)) {
+        cout << "Ну пацанчик, на цей раз виграв!" << endl;
+    }
+    else {
+        cout << "Ну шо браток, програв?!" << endl;
+    }
+
+}

@@ -35,5 +35,5 @@ public:
 	void changeAliveSt(bool val);
 	void changeFriendStatus(bool val);
 
-	~NPC();
+	~NPC() {}
 };

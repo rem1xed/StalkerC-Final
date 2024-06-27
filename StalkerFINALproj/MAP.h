@@ -9,10 +9,11 @@ class Map {
 	int progress; // 0-9
 	vector<Location> locations;
 public:
-	Map() { difficulty = 0; progress = 0; Location nullLoc; locations = { nullLoc }; }
+	Map() { difficulty = 0; progress = 1; Location nullLoc; locations = { nullLoc }; }
 	Map(int diffic, int progr, vector<Location> loc) : difficulty(diffic), progress(progr), locations(loc) {}
 	int returnDifficulty();
 	int returnProgress();
-
-	~Map();
+	void showLocations();
+	void removeLocation(const string& locToRemName);
+	~Map() {}
 };
