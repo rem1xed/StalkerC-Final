@@ -1,11 +1,12 @@
 ﻿  Character.cpp
   Item.cpp
-  MAP.cpp
+  Location.cpp
+  Map.cpp
   Mutant.cpp
   NPC.cpp
   Quest.cpp
-C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\Quest.cpp(72,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\Quest.cpp(73,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   RUN.cpp
-C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\RUN.cpp(21,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\RUN.cpp(23,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
   Generating Code...
   StalkerFINALproj.vcxproj -> C:\Users\User\source\repos\STALKERfinal\x64\Debug\StalkerFINALproj.exe

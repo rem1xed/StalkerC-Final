@@ -18,5 +18,5 @@ public:
 
 	int changeHealth();
 
-	~Mutant();
+	~Mutant() {}
 };

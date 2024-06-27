@@ -21,5 +21,9 @@ public:
 
 	void displayField(const vector<vector<char>>& field);
 	void artifactHunt(Character& player);
+	void playStalkeroulette(int numberOfChambers = 6);
+	void playRockPaperScissors();
+
+	const string returnName();
 };
 

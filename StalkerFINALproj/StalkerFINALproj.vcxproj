@@ -140,15 +140,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Location.cpp" />
     <ClCompile Include="Quest.cpp" />
     <ClCompile Include="Item.cpp" />
-    <ClCompile Include="MAP.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="Mutant.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="RUN.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
+    <ClInclude Include="Save.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="Quest.h" />
     <ClInclude Include="Item.h" />

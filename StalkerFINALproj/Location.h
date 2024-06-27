@@ -21,9 +21,14 @@ public:
 		Quest nullQ; QuestList = { nullQ };
 	
 	}
-
-	string returnName();
+	Location(const string& nam, int progr, vector<NPC> npcL, vector<Mutant> mutantL, vector<Quest> questL) :
+		name(nam), progress(progr), NPClist(npcL), MutantList(mutantL), QuestList(questL) {}
+	const string returnName();
 	int returnProgress();
 
-	int changeProgress();
+	void ShowNPCList();
+	void ShowMutantList();
+	void ShowQuestList();
+
+	void removeQuest(const string& QuestName);
 };

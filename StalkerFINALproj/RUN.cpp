@@ -16,6 +16,8 @@
 
 using namespace std;
 
+Location locTest;
+Map currentMap(3, 1, {locTest});
 
 
 void main()
