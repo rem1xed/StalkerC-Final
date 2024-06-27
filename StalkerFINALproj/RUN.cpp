@@ -24,4 +24,6 @@ void main()
 
 	playStalkeroulette();
 
+
+	cout << "1";
 }
