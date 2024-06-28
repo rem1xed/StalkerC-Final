@@ -19,6 +19,7 @@ public:
 	int returnType();
 
 
+
 	void displayField(const vector<vector<char>>& field);
 	bool artifactHunt(Character& player);
 	bool playStalkeroulette();
@@ -26,5 +27,8 @@ public:
 	bool guessTheWord();
 
 	const string returnName();
+
+	//void setType(int Ntype);
+	//void setName(string SetName);
 };
 

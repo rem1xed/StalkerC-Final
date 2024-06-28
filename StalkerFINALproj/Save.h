@@ -37,5 +37,6 @@ public:
 	//	currentLoc(currLc), CurrentLocationQuestList(CurrLocQLst), Playerhealth(plHeal), PlayerArmor(plArmo), PlayerRadiationlvl{ plRadlvl },
 	//	PlayermaxWeight(PlMxWe), PlayerbusyWeight(PlBsWe), PlayercanMove(plCmov) {}
 
-	bool OverwriteProgress(const string& fileName, const string& currLoc, vector<Quest> CurrLocQuestList, int plHeal, int plArmo, int plRadlvl, int PlMxWe, int PlBsWe, bool plCmov);
+	bool OverwriteProgress(const string& fileName, const string& currLoc, vector<Quest> CurrLocQuestList, int plHeal, int plArmo, int plRadlvl, int PlMxWe, int PlBsWe, bool plCmov, vector<Item> FileInventory);
+	bool WriteInto(const string& fileName, string& currLoc, vector<Quest>& CurrLocQuestList, int& plHeal, int& plArmo, int& plRadlvl, int& PlMxWe, int& PlBsWe, bool& plCmov, vector<Item>& FileInventory);
 };
