@@ -17,7 +17,7 @@ using namespace std;
 
 Location locTest, locTest2;
 
-Map currentMap(3, 1, {locTest, locTest});
+Map currentMap(3, 1, { locTest, locTest2, locTest });
 
 
 
@@ -54,9 +54,28 @@ void main()
 	Item vodka("Vodka", 1, 10, 5, 1);
 	vector<Item> inventory = { medkit, vodka };
 
-	Character player("Stalker", 100, 50, 0, 100, 10, true, inventory);
+	Quest artifactHunt("artefact");
+	Quest guessTheWord("number");
+	Quest playStalkeroulette("roulette");
+	Quest playRockPaperScissors("RockPaperScissors");
 
 	
+
+	NPC nps1("bandit", 100, 50, false, false, inventory);
+
+
+	Mutant snorc("snorc", 75, 20);
+
+	vector<NPC> NPClist = { nps1 };
+	vector<Quest> QuestList = { artifactHunt, guessTheWord,  playStalkeroulette , playRockPaperScissors };
+	vector<Mutant> MutantList = { snorc };
+
+
+
+	Character player("Stalker", 100, 50, 0, 100, 10, true, inventory);
+	Location location( "fff", 1, NPClist, MutantList, QuestList);
+	
+
 
 	
 	int choice = 0;

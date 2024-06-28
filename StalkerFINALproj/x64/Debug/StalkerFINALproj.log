@@ -6,4 +6,7 @@ C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\MAP.h(13,132): warning 
   (compiling source file 'RUN.cpp')
   
 C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\RUN.cpp(39,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  StalkerFINALproj.vcxproj -> C:\Users\м\Source\Repos\StalkerC-Final\x64\Debug\StalkerFINALproj.exe
+C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\RUN.cpp(64,10): error C2661: 'NPC::NPC': no overloaded function takes 6 arguments
+  C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\RUN.cpp(64,10):
+  while trying to match the argument list '(const char [7], int, int, int, int, std::vector<Item,std::allocator<Item>>)'
+  
