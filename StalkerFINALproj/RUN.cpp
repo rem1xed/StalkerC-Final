@@ -126,7 +126,7 @@ void main()
 	//string FileNameLoc;
 	//vector<Quest> fileQuestList;
 
-	save1.WriteInto(fileName, FileNameLoc, fileQuestList, FileHealth, FileArmor, FileRadLvl, FileMaxweight, FileBsWeight,canMove, inventoryFILE );
+	//save1.WriteInto(fileName, FileNameLoc, fileQuestList, FileHealth, FileArmor, FileRadLvl, FileMaxweight, FileBsWeight,canMove, inventoryFILE );
 
 	Character player("Stalker", FileHealth, FileArmor, FileRadLvl, FileMaxweight, FileBsWeight, canMove, inventoryFILE);
 	Location location(FileNameLoc, 1, NPClist, MutantList, fileQuestList);

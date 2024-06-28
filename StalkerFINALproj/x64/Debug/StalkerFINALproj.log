@@ -1,3 +1,4 @@
-﻿  Save.cpp
+﻿  RUN.cpp
 C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\Location.h(27,28): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\RUN.cpp(87,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
   StalkerFINALproj.vcxproj -> C:\Users\User\source\repos\STALKERfinal\x64\Debug\StalkerFINALproj.exe
