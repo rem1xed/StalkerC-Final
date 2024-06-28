@@ -14,16 +14,15 @@ class Quest {
 	string name;
 	int type; //0 - artifactHunt, 1 = playStalkerroulete, 2 - playRockPaperScissors 3 - guessTheWord
 public:
-	Quest() { name = "NULL"; }
-	Quest(const string nam) : name(nam) {}
-
+	Quest() { name = "NULL"; type = 0; }
+	Quest(const string nam, int ty) : name(nam), type(ty) {}
+	int returnType();
 
 
 	void displayField(const vector<vector<char>>& field);
 	bool artifactHunt(Character& player);
 	bool playStalkeroulette();
 	bool playRockPaperScissors();
-	void playQuest(int type, Character& player);
 	bool guessTheWord();
 
 	const string returnName();

@@ -147,6 +147,7 @@
     <ClCompile Include="Mutant.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="RUN.cpp" />
+    <ClCompile Include="Save.cpp" />
     <ClCompile Include="show.cpp" />
   </ItemGroup>
   <ItemGroup>
