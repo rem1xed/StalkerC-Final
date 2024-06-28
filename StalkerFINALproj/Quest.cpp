@@ -15,6 +15,9 @@ const string Quest::returnName(){ return name;}
 
 int Quest::returnType() { return type; }
 
+//void Quest::setType(int Ntype);
+//void Quest::setName(string SetName);
+
 bool Quest::guessTheWord()
 {
 

@@ -3,7 +3,7 @@
 #include <ctime>
 #include <Windows.h>
 #include <string>
-
+#include <fstream>
 #include "Character.h"
 
 #include "Item.h"
@@ -53,17 +53,40 @@ vector<Mutant> MutantList = { snorc };
 
 
 
-Character player("Stalker", 100, 50, 0, 100, 10, true, inventory);
-Location location("fff", 1, NPClist, MutantList, QuestList);
-string fileName = "save1.txt";
+
 
 //const string& fileName,const string& currLoc, vector<Quest> CurrLocQuestList,
 // int plHeal, int plArmo, int plRadlvl, int PlMxWe, int PlBsWe, bool plCmov
 SaveGame save1("save1.txt");
 
+
+//load game
+//Character(const string& na, int he, int ar, int rad, int maxW, int busyW, bool canMo,
+
+// vector<Item> invent) : name(na), health(he), armor(ar), radiationlvl(rad), maxWeight(maxW), busyWeight(busyW), canMove(canMo), inventory(invent) {}
+
+//save1.OverwriteProgress(fileName, location.returnName(), QuestList, 
+// player.returnHealth(), player.returnArmor(), player.returnRadLvl(), player.returnMaxWeight(),
+// player.returnBusyWeight(), player.returnIfCanMove());
+
+//player from file
+
+int FileHealth;
+int FileArmor;
+int FileRadLvl;
+int FileMaxweight;
+int FileBsWeight;
+bool canMove;
+vector<Item> inventoryFILE;
+//location
+string FileNameLoc;
+vector<Quest> fileQuestList;
+
+
+
 void main()
 {
-	save1.OverwriteProgress(fileName, location.returnName(), QuestList, player.returnHealth(), player.returnArmor(), player.returnRadLvl(), player.returnMaxWeight(), player.returnBusyWeight(), player.returnIfCanMove());
+
 
 	SetConsoleCP(1251); // встановлення кодування Windows-1251 в  потік введення
 	SetConsoleOutputCP(1251); // встановлення кодування Windows-1251 в  потік виведення
@@ -74,6 +97,7 @@ void main()
 	
 
 
+	string fileName = "save1.txt";
 
 
 	//0 - artifactHunt, 1 = playStalkerroulete, 2 - playRockPaperScissors 3 - guessTheWord
@@ -86,11 +110,26 @@ void main()
 
 
 
+	ofstream file(fileName);
 
+	//const string& fileName, string& currLoc, vector<Quest>& CurrLocQuestList, int& plHeal, int& plArmo, 
+	// int& plRadlvl, int& PlMxWe, int& PlBsWe, bool& plCmov, vector<Item>& FileInventory
 
+	//int FileHealth;
+	//int FileArmor;
+	//int FileRadLvl;
+	//int FileMaxweight;
+	//int FileBsWeight;
+	//bool canMove;
+	//vector<Item> inventoryFILE;
+	////location
+	//string FileNameLoc;
+	//vector<Quest> fileQuestList;
 
+	save1.WriteInto(fileName, FileNameLoc, fileQuestList, FileHealth, FileArmor, FileRadLvl, FileMaxweight, FileBsWeight,canMove, inventoryFILE );
 
-
+	Character player("Stalker", FileHealth, FileArmor, FileRadLvl, FileMaxweight, FileBsWeight, canMove, inventoryFILE);
+	Location location(FileNameLoc, 1, NPClist, MutantList, fileQuestList);
 
 	int choice = 0;
 	while (true)
@@ -108,8 +147,10 @@ void main()
 			
 			break;
 		case 3:
+			break;
+		case 7:
 
-
+			save1.OverwriteProgress(fileName, location.returnName(), QuestList, player.returnHealth(), player.returnArmor(), player.returnRadLvl(), player.returnMaxWeight(), player.returnBusyWeight(), player.returnIfCanMove(), inventory);
 			break;
 		}
 
