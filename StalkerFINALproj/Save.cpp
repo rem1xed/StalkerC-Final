@@ -27,7 +27,7 @@ bool SaveGame::WriteInto(const string& fileName, string& currLoc, vector<Quest>&
     outFile << endl;
 
     outFile >> plHeal;
-    outFile << endl;
+    outFile.ignore('\n');
     outFile >> plArmo;
     outFile << endl;
     outFile >> plRadlvl;
