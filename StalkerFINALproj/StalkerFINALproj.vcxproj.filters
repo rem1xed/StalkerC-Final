@@ -33,7 +33,16 @@
     <ClCompile Include="Item.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="games.cpp">
+    <ClCompile Include="Location.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Quest.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="show.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Save.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,7 +68,7 @@
     <ClInclude Include="Quest.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="games.h">
+    <ClInclude Include="Save.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
