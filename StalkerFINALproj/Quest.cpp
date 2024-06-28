@@ -15,14 +15,12 @@ const string Quest::returnName(){ return name;}
 
 int Quest::returnType() { return type; }
 
-<<<<<<< HEAD
+
 //void Quest::setType(int Ntype);
 //void Quest::setName(string SetName);
 
-bool Quest::guessTheWord()
-=======
+
 bool Quest::guessTheWord(Character& player)
->>>>>>> a4de48a5ce1cbcc790a3e48ba5f13d9bae9ddfed
 {
 
     srand(static_cast<unsigned int>(time(0)));

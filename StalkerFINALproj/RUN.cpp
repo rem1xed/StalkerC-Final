@@ -18,17 +18,6 @@ using namespace std;
 Location locTest, locTest2;
 
 
-
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> main
-=======
->>>>>>> a4de48a5ce1cbcc790a3e48ba5f13d9bae9ddfed
 void showMenu()
 {
 	cout << "1 - information about the stalker" << endl;
@@ -42,9 +31,7 @@ void showMenu()
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 Quest artifactHunt("artefact", 0);
 Quest guessTheWord("number", 3);
 Quest playStalkeroulette("roulette", 1);
@@ -94,11 +81,6 @@ vector<Item> inventoryFILE;
 string FileNameLoc;
 vector<Quest> fileQuestList;
 
->>>>>>> main
-
-
-=======
->>>>>>> a4de48a5ce1cbcc790a3e48ba5f13d9bae9ddfed
 void main()
 {
 
@@ -108,30 +90,11 @@ void main()
 
 
 
-<<<<<<< HEAD
-	int SuccessInTheQuest=1;
-
-<<<<<<< HEAD
-	cout << "Map Progress: " << currentMap.returnProgress() << endl;
-	currentMap.showLocations();
-=======
-
->>>>>>> a4de48a5ce1cbcc790a3e48ba5f13d9bae9ddfed
-
-
 	Item medkit("Medkit", 1, 50, 20, 0);
 	Item vodka("Vodka", 1, 10, 5, 1);
 	vector<Item> inventory = { medkit, vodka };
 
-<<<<<<< HEAD
-	Character player("Stalker", 100, 50, 0, 100, 10, true, inventory);
 
-	
-
-	
-=======
-
-	
 
 
 	string fileName = "save1.txt";
@@ -140,16 +103,9 @@ void main()
 	//0 - artifactHunt, 1 = playStalkerroulete, 2 - playRockPaperScissors 3 - guessTheWord
 
 
-
-=======
-
-	
 	
 
 	NPC nps1("bandit", 100, 50, false, false, inventory);
-
-
-	
 
 	Quest artifactHunt("artifactHunt", 0);
 	Quest guessTheWord("guessTheWord", 3);
@@ -159,12 +115,8 @@ void main()
 	//0 - artifactHunt, 1 = playStalkerroulete, 2 - playRockPaperScissors 3 - guessTheWord
 
 	//NPC nps1("bandit", 100, 50, false, false, inventory);
->>>>>>> a4de48a5ce1cbcc790a3e48ba5f13d9bae9ddfed
+
 	//NPC(const string & nam, int hlth, int arm, bool isAl, bool frStat)
-
-
-
-
 
 	ofstream file(fileName);
 
@@ -183,11 +135,11 @@ void main()
 	//vector<Quest> fileQuestList;
 
 	//save1.WriteInto(fileName, FileNameLoc, fileQuestList, FileHealth, FileArmor, FileRadLvl, FileMaxweight, FileBsWeight,canMove, inventoryFILE );
-
-	Character player("Stalker", FileHealth, FileArmor, FileRadLvl, FileMaxweight, FileBsWeight, canMove, inventoryFILE);
+	Character player("Stalker", 100, 50, 0, 100, 10, true, inventory);
+	//FILE//Character player("Stalker", FileHealth, FileArmor, FileRadLvl, FileMaxweight, FileBsWeight, canMove, inventoryFILE);
 	Location location(FileNameLoc, 1, NPClist, MutantList, fileQuestList);
 
->>>>>>> main
+
 	int choice = 0;
 	while (true)
 	{
@@ -198,37 +150,12 @@ void main()
 		{
 		case 1:
 			player.displayCharacterInfo();
-
 			break;
-<<<<<<< HEAD
-<<<<<<< HEAD
-		case 2: 
-
-
-			break;
-		case 3:
-
-
-=======
-		case 2:
-			
-			break;
-		case 3:
-			break;
-		case 7:
-
-			save1.OverwriteProgress(fileName, location.returnName(), QuestList, player.returnHealth(), player.returnArmor(), player.returnRadLvl(), player.returnMaxWeight(), player.returnBusyWeight(), player.returnIfCanMove(), inventory);
->>>>>>> main
-			break;
-		}
-=======
 		case 2:
 			location.ShowQuestList();
-			
 			break;
 		case 3:
 			location.playQuest(player, "artifactHunt");
-
 			break;
 		case 4:
 			location.playQuest(player, "guessTheWord");
@@ -239,25 +166,22 @@ void main()
 		case 6:
 			location.playQuest(player, "RockPaperScissors");
 			break;
-
 		case 7:
+			save1.OverwriteProgress(fileName, location.returnName(), QuestList, player.returnHealth(), player.returnArmor(), player.returnRadLvl(), player.returnMaxWeight(), player.returnBusyWeight(), player.returnIfCanMove(), inventory);
 			break;
-
+		default:
+			break;
 		}
 		
-
->>>>>>> a4de48a5ce1cbcc790a3e48ba5f13d9bae9ddfed
-
-
-
-
 	}
 
+}
 
 
 
 
-<<<<<<< HEAD
+
+
 
 
 	//SuccessInTheQuest = guesTsheWord();
@@ -276,9 +200,8 @@ void main()
 
 
 
-=======
->>>>>>> a4de48a5ce1cbcc790a3e48ba5f13d9bae9ddfed
-}
+
+
 
 
 

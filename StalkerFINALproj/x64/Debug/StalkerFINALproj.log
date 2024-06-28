@@ -1,22 +1,4 @@
-<<<<<<< HEAD
 ﻿  RUN.cpp
-<<<<<<< HEAD
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\Location.h(26,28): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'RUN.cpp')
-=======
-﻿  Quest.cpp
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\Location.h(27,28): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'Quest.cpp')
->>>>>>> a4de48a5ce1cbcc790a3e48ba5f13d9bae9ddfed
-  
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\Quest.cpp(81,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\Quest.cpp(128,1): warning C4715: 'Quest::artifactHunt': not all control paths return a value
-  StalkerFINALproj.vcxproj -> C:\Users\м\Source\Repos\StalkerC-Final\x64\Debug\StalkerFINALproj.exe
-<<<<<<< HEAD
-=======
 C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\Location.h(27,28): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\RUN.cpp(87,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\RUN.cpp(84,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
   StalkerFINALproj.vcxproj -> C:\Users\User\source\repos\STALKERfinal\x64\Debug\StalkerFINALproj.exe
->>>>>>> main
-=======
->>>>>>> a4de48a5ce1cbcc790a3e48ba5f13d9bae9ddfed

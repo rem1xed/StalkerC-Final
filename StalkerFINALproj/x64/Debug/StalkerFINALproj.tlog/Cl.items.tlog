@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a4de48a5ce1cbcc790a3e48ba5f13d9bae9ddfed
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\Character.cpp;C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\x64\Debug\Character.obj
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\Location.cpp;C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\x64\Debug\Location.obj
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\Quest.cpp;C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\x64\Debug\Quest.obj
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\Item.cpp;C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\x64\Debug\Item.obj
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\Map.cpp;C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\x64\Debug\Map.obj
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\Mutant.cpp;C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\x64\Debug\Mutant.obj
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\NPC.cpp;C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\x64\Debug\NPC.obj
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\RUN.cpp;C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\x64\Debug\RUN.obj
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\Save.cpp;C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\x64\Debug\Save.obj
-C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\show.cpp;C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\x64\Debug\show.obj
-<<<<<<< HEAD
-=======
 C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\Character.cpp;C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\x64\Debug\Character.obj
 C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\Location.cpp;C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\x64\Debug\Location.obj
 C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\Quest.cpp;C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\x64\Debug\Quest.obj
@@ -24,6 +8,3 @@ C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\NPC.cpp;C:\Users\User\s
 C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\RUN.cpp;C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\x64\Debug\RUN.obj
 C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\Save.cpp;C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\x64\Debug\Save.obj
 C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\show.cpp;C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\x64\Debug\show.obj
->>>>>>> main
-=======
->>>>>>> a4de48a5ce1cbcc790a3e48ba5f13d9bae9ddfed
