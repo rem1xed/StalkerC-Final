@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstdlib>
+
 #include <ctime>
 #include <windows.h>
 #include "Item.h"
@@ -13,7 +13,10 @@ using namespace std;
 
 const string Quest::returnName(){ return name;}
 
+int Quest::returnType() { return type; }
 
+//void Quest::setType(int Ntype);
+//void Quest::setName(string SetName);
 
 bool Quest::guessTheWord()
 {
@@ -198,33 +201,3 @@ bool Quest::playRockPaperScissors() {
 
 //0 - artifactHunt, 1 = playStalkerroulete, 2 - playRockPaperScissors 3 - guessTheWord
 
-void Quest::playQuest(int type, Character& player) {
-    switch (type)
-    {
-    case 0:
-    {
-        artifactHunt(player);
-        break;
-    }
-    case 1:
-    {
-        playStalkeroulette();
-        break;
-    }
-    case 2:
-    {
-        playRockPaperScissors();
-        break;
-    }
-    case 3:
-    {
-        guessTheWord();
-        break;
-    }
-    default:
-    {
-        cerr << "\nWrong value";
-        break;
-    }
-    }
-}

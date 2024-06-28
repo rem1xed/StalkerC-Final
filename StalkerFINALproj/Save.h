@@ -17,21 +17,26 @@
 
 class SaveGame
 {
-	string currentLoc;
-	vector<Quest> CurrentLocationQuestList;
+	string saveName;
+	//string currentLoc;
+	//vector<Quest> CurrentLocationQuestList;
 
-
-	vector<Location> locationRemain;
-	int Playerhealth;
-	int PlayerArmor;
-	int PlayerRadiationlvl;
-	int PlayermaxWeight;
-	int PlayerbusyWeight; //if BusyWeight >= maxWeight : can't move(add logic)
-	bool PlayercanMove;
+	//int Playerhealth;
+	//int PlayerArmor;
+	//int PlayerRadiationlvl;
+	//int PlayermaxWeight;
+	//int PlayerbusyWeight; //if BusyWeight >= maxWeight : can't move(add logic)
+	//bool PlayercanMove;
 
 public:
-	SaveGame() { currentLoc = "TEST"; Quest nullQ; CurrentLocationQuestList = { nullQ }; Location nullLoc; locationRemain = { nullLoc }; }
-	SaveGame(const string& currLc, vector<Quest> CurrLocQLst, vector<Location> locRem, int plHeal, int plArmo, int plRadlvl, int PlMxWe, int PlBsWe, bool plCmov) :
-		currentLoc(currLc), CurrentLocationQuestList(CurrLocQLst), locationRemain(locRem), Playerhealth(plHeal), PlayerArmor(plArmo), PlayerRadiationlvl{ plRadlvl },
-		PlayermaxWeight(PlMxWe), PlayerbusyWeight(PlBsWe), PlayercanMove(plCmov) {}
+	SaveGame(const string& name) : saveName(name) {}
+	//SaveGame() { currentLoc = "TEST"; Quest nullQ; CurrentLocationQuestList = { nullQ }; Location nullLoc; Playerhealth = 0; PlayerArmor = 0;
+	//PlayerRadiationlvl; PlayermaxWeight = 0; PlayerbusyWeight = 0; PlayercanMove = 0;
+	//}
+	//SaveGame(const string& currLc, vector<Quest> CurrLocQLst, int plHeal, int plArmo, int plRadlvl, int PlMxWe, int PlBsWe, bool plCmov) :
+	//	currentLoc(currLc), CurrentLocationQuestList(CurrLocQLst), Playerhealth(plHeal), PlayerArmor(plArmo), PlayerRadiationlvl{ plRadlvl },
+	//	PlayermaxWeight(PlMxWe), PlayerbusyWeight(PlBsWe), PlayercanMove(plCmov) {}
+
+	bool OverwriteProgress(const string& fileName, const string& currLoc, vector<Quest> CurrLocQuestList, int plHeal, int plArmo, int plRadlvl, int PlMxWe, int PlBsWe, bool plCmov, vector<Item> FileInventory);
+	bool WriteInto(const string& fileName, string& currLoc, vector<Quest>& CurrLocQuestList, int& plHeal, int& plArmo, int& plRadlvl, int& PlMxWe, int& PlBsWe, bool& plCmov, vector<Item>& FileInventory);
 };

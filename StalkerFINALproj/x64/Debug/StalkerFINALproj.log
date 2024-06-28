@@ -1,4 +1,5 @@
 ﻿  RUN.cpp
+<<<<<<< HEAD
 C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\Location.h(26,28): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'RUN.cpp')
   
@@ -7,3 +8,8 @@ C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\MAP.h(13,132): warning 
   
 C:\Users\м\source\repos\StalkerC-Final\StalkerFINALproj\RUN.cpp(39,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
   StalkerFINALproj.vcxproj -> C:\Users\м\Source\Repos\StalkerC-Final\x64\Debug\StalkerFINALproj.exe
+=======
+C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\Location.h(27,28): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\User\source\repos\STALKERfinal\StalkerFINALproj\RUN.cpp(87,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  StalkerFINALproj.vcxproj -> C:\Users\User\source\repos\STALKERfinal\x64\Debug\StalkerFINALproj.exe
+>>>>>>> main

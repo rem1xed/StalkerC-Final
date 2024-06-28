@@ -4,6 +4,7 @@
 #include "NPC.h"
 #include "Mutant.h"
 #include "Quest.h"
+
 using namespace std;
 
 class Location
@@ -25,12 +26,16 @@ public:
 		name(nam), progress(progr), NPClist(npcL), MutantList(mutantL), QuestList(questL) {
 		progress = QuestList.size();
 	}
+
 	const string returnName();
 	int returnProgress();
 
 	void ShowNPCList();
 	void ShowMutantList();
 	void ShowQuestList();
+	bool checkIfQuestExists(const string& QuestName);
+
+	bool playQuest(Character& player, const string& QuestName);
 
 	void removeQuest(const string& QuestName);
 };
