@@ -87,17 +87,17 @@ bool Location::playQuest(Character& player, const string& QuestName) {
 			}
 			case 1:
 			{
-				QuestList[i].playStalkeroulette();
+				QuestList[i].playStalkeroulette(player);
 				break;
 			}
 			case 2:
 			{
-				QuestList[i].playRockPaperScissors();
+				QuestList[i].playRockPaperScissors(player);
 				break;
 			}
 			case 3:
 			{
-				QuestList[i].guessTheWord();
+				QuestList[i].guessTheWord(player);
 				break;
 			}
 			default:
