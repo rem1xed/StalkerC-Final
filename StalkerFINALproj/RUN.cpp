@@ -12,7 +12,7 @@
 #include "Mutant.h"
 #include "NPC.h"
 #include "Quest.h"
-
+#include "Save.h"
 using namespace std;
 
 Location locTest, locTest2;
@@ -33,46 +33,61 @@ void showMenu()
 
 
 
+Quest artifactHunt("artefact", 0);
+Quest guessTheWord("number", 3);
+Quest playStalkeroulette("roulette", 1);
+Quest playRockPaperScissors("RockPaperScissors", 2);
 
+Item medkit("Medkit", 1, 50, 20, 0);
+Item vodka("Vodka", 1, 10, 5, 1);
+
+vector<Item> inventory = { medkit, vodka };
+
+Mutant snorc("snorc", 75, 20);
+NPC nps1("bandit", 100, 50, false, false, inventory);
+
+vector<NPC> NPClist = { nps1 };
+vector<Quest> QuestList = { artifactHunt, guessTheWord,  playStalkeroulette , playRockPaperScissors };
+vector<Mutant> MutantList = { snorc };
+
+
+
+
+Character player("Stalker", 100, 50, 0, 100, 10, true, inventory);
+Location location("fff", 1, NPClist, MutantList, QuestList);
+string fileName = "save1.txt";
+
+//const string& fileName,const string& currLoc, vector<Quest> CurrLocQuestList,
+// int plHeal, int plArmo, int plRadlvl, int PlMxWe, int PlBsWe, bool plCmov
+SaveGame save1("save1.txt");
 
 void main()
 {
-
+	save1.OverwriteProgress(fileName, location.returnName(), QuestList, player.returnHealth(), player.returnArmor(), player.returnRadLvl(), player.returnMaxWeight(), player.returnBusyWeight(), player.returnIfCanMove());
 
 	SetConsoleCP(1251); // встановлення кодування Windows-1251 в  потік введення
 	SetConsoleOutputCP(1251); // встановлення кодування Windows-1251 в  потік виведення
 
 
 
-	int SuccessInTheQuest = 1;
+
+	
 
 
 
-
-	Item medkit("Medkit", 1, 50, 20, 0);
-	Item vodka("Vodka", 1, 10, 5, 1);
-	vector<Item> inventory = { medkit, vodka };
-
-	Quest artifactHunt("artefact", 0);
-	Quest guessTheWord("number", 3);
-	Quest playStalkeroulette("roulette", 1);
-	Quest playRockPaperScissors("RockPaperScissors", 2);
 
 	//0 - artifactHunt, 1 = playStalkerroulete, 2 - playRockPaperScissors 3 - guessTheWord
 
-	NPC nps1("bandit", 100, 50, false, false, inventory);
+
+
 	//NPC(const string & nam, int hlth, int arm, bool isAl, bool frStat)
 
-	Mutant snorc("snorc", 75, 20);
-
-	vector<NPC> NPClist = { nps1 };
-	vector<Quest> QuestList = { artifactHunt, guessTheWord,  playStalkeroulette , playRockPaperScissors };
-	vector<Mutant> MutantList = { snorc };
 
 
 
-	Character player("Stalker", 100, 50, 0, 100, 10, true, inventory);
-	Location location("fff", 1, NPClist, MutantList, QuestList);
+
+
+
 
 
 
@@ -90,8 +105,7 @@ void main()
 
 			break;
 		case 2:
-
-
+			
 			break;
 		case 3:
 
