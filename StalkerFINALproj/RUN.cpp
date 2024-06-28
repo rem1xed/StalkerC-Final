@@ -22,6 +22,19 @@ Map currentMap(3, 1, {locTest, locTest});
 
 
 
+
+void showMenu()
+{
+	cout << "1 - information about the stalker" << endl;
+	cout << "2 - see the available quests" << endl;
+	cout << "3 - ... " << endl;
+
+}
+
+
+
+
+
 void main()
 {
 	
@@ -33,7 +46,7 @@ void main()
 
 	int SuccessInTheQuest=1;
 
-	cout << "Map Progress: " << currentMap.returnProgress();
+	cout << "Map Progress: " << currentMap.returnProgress() << endl;
 	currentMap.showLocations();
 
 
@@ -43,9 +56,42 @@ void main()
 
 	Character player("Stalker", 100, 50, 0, 100, 10, true, inventory);
 
-	player.displayCharacterInfo();
+	
 
 	
+	int choice = 0;
+	while (true)
+	{
+		showMenu();
+		cin >> choice;
+
+		switch (choice)
+		{
+		case 1:
+			player.displayCharacterInfo();
+
+			break;
+		case 2: 
+
+
+			break;
+		case 3:
+
+
+			break;
+		}
+
+
+
+
+	}
+
+
+
+
+
+
+
 	//SuccessInTheQuest = guesTsheWord();
 
 	//playRockPaperScissors();
