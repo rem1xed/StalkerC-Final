@@ -21,9 +21,9 @@ public:
 
 	void displayField(const vector<vector<char>>& field);
 	bool artifactHunt(Character& player);
-	bool playStalkeroulette();
-	bool playRockPaperScissors();
-	bool guessTheWord();
+	bool playStalkeroulette(Character& player);
+	bool playRockPaperScissors(Character& player);
+	bool guessTheWord(Character& player);
 
 	const string returnName();
 };

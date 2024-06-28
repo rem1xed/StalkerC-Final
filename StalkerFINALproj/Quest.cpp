@@ -15,7 +15,7 @@ const string Quest::returnName(){ return name;}
 
 int Quest::returnType() { return type; }
 
-bool Quest::guessTheWord()
+bool Quest::guessTheWord(Character& player)
 {
 
     srand(static_cast<unsigned int>(time(0)));
@@ -45,12 +45,18 @@ bool Quest::guessTheWord()
             int difference = abs(playerGuess - secretNumber);
             if (difference >= 3) {
                 cout << "It's cold" << endl;
+                cout << "Health -10" << endl;
+                player.changeHealth(10, false);
             }
             else if (difference == 1) {
                 cout << "Hot" << endl;
+                cout << "Health -10" << endl;
+                player.changeHealth(10, false);
             }
             else {
                 cout << "Try again" << endl;
+                cout << "Health -10" << endl;
+                player.changeHealth(10, false);
             }
         }
     }
@@ -73,9 +79,9 @@ void Quest::displayField(const vector<vector<char>>& field) {
 bool Quest::artifactHunt(Character& player)
 {
     srand(time(0));
-    vector<vector<char>> field(3, vector<char>(3, '0'));
-    int artifactX = rand() % 3;
-    int artifactY = rand() % 3;
+    vector<vector<char>> field(4, vector<char>(4, '0'));
+    int artifactX = rand() % 4;
+    int artifactY = rand() % 4;
 
     int anomalies = 0;
     while (anomalies < 4) {
@@ -88,6 +94,8 @@ bool Quest::artifactHunt(Character& player)
     }
 
     bool foundArtifact = false;
+
+
     while (!foundArtifact) {
         Quest::displayField(field);
         int x, y;
@@ -99,7 +107,7 @@ bool Quest::artifactHunt(Character& player)
             Item artifact("Artifact", 1, 100, 0, 2);
             player.addItem(artifact);
             foundArtifact = true;
-            return true;
+            
         }
         else if (field[x][y] == '*') {
             cout << "You hit an anomaly! Health -10" << endl;
@@ -120,7 +128,7 @@ bool Quest::artifactHunt(Character& player)
 }
 
 
-bool Quest::playStalkeroulette()
+bool Quest::playStalkeroulette(Character& player)
 {
     int numberOfChambers = 6;
     srand(static_cast<unsigned int>(time(0)));
@@ -145,6 +153,8 @@ bool Quest::playStalkeroulette()
     Sleep(2000);
     if (playerChoice - 1 == bulletPosition) {
         cout << "There was a stalker, there is no stalker" << endl;
+        cout << "Health -50" << endl;
+        player.changeHealth(50, false);
         return false;
     }
     else {
@@ -156,7 +166,7 @@ bool Quest::playStalkeroulette()
 }
 
 
-bool Quest::playRockPaperScissors() {
+bool Quest::playRockPaperScissors(Character& player) {
     srand(static_cast<unsigned int>(time(0)));
 
     int playerChoice, computerChoice;
@@ -192,6 +202,8 @@ bool Quest::playRockPaperScissors() {
     }
     else {
         cout << "You lost this time!" << endl;
+        cout << "Health -10" << endl;
+        player.changeHealth(10, false);
         return false;
     }
 }
