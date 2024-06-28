@@ -23,7 +23,6 @@ public:
 	bool artifactHunt(Character& player);
 	bool playStalkeroulette();
 	bool playRockPaperScissors();
-	void playQuest(int type, Character& player);
 	bool guessTheWord();
 
 	const string returnName();

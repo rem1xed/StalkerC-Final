@@ -15,9 +15,7 @@
 
 using namespace std;
 
-Location locTest, locTest2;
-
-Map currentMap(3, 1, {locTest, locTest});
+Location locTest;
 
 
 
@@ -33,8 +31,6 @@ void main()
 
 	int SuccessInTheQuest=1;
 
-	cout << "Map Progress: " << currentMap.returnProgress();
-	currentMap.showLocations();
 
 
 	Item medkit("Medkit", 1, 50, 20, 0);
