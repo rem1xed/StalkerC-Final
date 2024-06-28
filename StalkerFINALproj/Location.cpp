@@ -61,13 +61,13 @@ void Location::removeQuest(const string& QuestName)
 	}
 };
 
-bool Location::playQuest(int type, Character& player, const string& QuestName) {
+bool Location::playQuest(Character& player, const string& QuestName) {
 
 	for (int i = 0; i < QuestList.size(); i++)
 	{
 		if (QuestList[i].returnName() == QuestName)
 		{
-			switch (type)
+			switch (QuestList[i].returnType())
 			{
 			case 0:
 			{

@@ -26,6 +26,7 @@ public:
 		name(nam), progress(progr), NPClist(npcL), MutantList(mutantL), QuestList(questL) {
 		progress = QuestList.size();
 	}
+
 	const string returnName();
 	int returnProgress();
 
@@ -34,7 +35,7 @@ public:
 	void ShowQuestList();
 	bool checkIfQuestExists(const string& QuestName);
 
-	bool playQuest(int type, Character& player, const string& QuestName);
+	bool playQuest(Character& player, const string& QuestName);
 
 	void removeQuest(const string& QuestName);
 };

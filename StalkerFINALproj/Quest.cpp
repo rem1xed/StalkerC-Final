@@ -13,7 +13,7 @@ using namespace std;
 
 const string Quest::returnName(){ return name;}
 
-
+int Quest::returnType() { return type; }
 
 bool Quest::guessTheWord()
 {
