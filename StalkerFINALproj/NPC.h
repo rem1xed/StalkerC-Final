@@ -21,7 +21,7 @@ class NPC {
 	vector<Item> inventory;
 public:
 	NPC() { name = "NULL", health = 0, armor = 0, isAlive = 0, friendStatus = 0; Item nullIt; inventory = { nullIt }; }
-	NPC(const string& nam, int hlth, int arm, bool isAl, bool frStat) : name(nam), health(hlth), armor(arm), isAlive(isAl), friendStatus(frStat) {}
+	NPC(const string& nam, int hlth, int arm, bool isAl, bool frStat, vector<Item> inv) : name(nam), health(hlth), armor(arm), isAlive(isAl), friendStatus(frStat), inventory(inv) {}
 
 	const string returnName();
 	int returnHealth();
